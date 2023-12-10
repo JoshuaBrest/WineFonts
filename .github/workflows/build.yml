@@ -1,0 +1,31 @@
+name: Build Fonts
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build Fonts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Rclone
+        uses: AnimMouse/setup-rclone@v1
+        with:
+                rclone_config: ${{ secrets.RCLONE_CONFIG }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 16
+      - name: Upload Libraries to R2
+        env:
+          RCLONE_CONFIG_R2_TYPE: s3
+          RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+          RCLONE_CONFIG_R2_ENV_AUTH: true
+          RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.RCLONE_ACCESS_KEY_ID }}
+          RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.RCLONE_SECRET_ACCESS_KEY }}
+          RCLONE_CONFIG_R2_ENDPOINT: ${{ secrets.RCLONE_ENDPOINT }}
+        run: |
+          rclone purge r2:font-bucket
+          rclone copy

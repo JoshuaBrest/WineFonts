@@ -1,0 +1,240 @@
+{
+    "groups": [
+        {
+            "name": "corefonts",
+            "fonts": [
+                "28ba216b-42bb-4894-a1b2-0a7d0af3181b",
+                "28ef5602-f2ce-4cad-bb7c-28cc4de37b00",
+                "2dcc7646-03a7-4454-a5e8-ebd761b920f0",
+                "2f3c7f5c-7e76-4955-8f91-f8752f510e87",
+                "4581db00-e2fb-4da0-b721-6d868e953aa8",
+                "4d4d3230-276f-4cc8-bfbc-c629346987a2",
+                "5dee63cc-bc8f-42a0-bb1b-666a1a0df88f",
+                "6b2988e6-e25c-4173-88c5-9ef26ee0780f",
+                "7c9dcf60-3fd9-4464-859f-69ffb75593f3",
+                "92a8e078-f336-4b62-bbc6-5f28b8293ee8",
+                "f1dc67ca-32ec-4a39-baa1-e08234bcdcac"
+            ]
+        }
+    ],
+    "downloads": [],
+    "fonts": [
+        {
+            "id": "2f3c7f5c-7e76-4955-8f91-f8752f510e87",
+            "name": "Andale Mono",
+            "shortName": "andale",
+            "publisher": "Microsoft",
+            "categories": [
+                "monospaced"
+            ],
+            "installations": [
+                {
+                    "type": "cabextract",
+                    "_localPath": "corefonts/andale32.exe",
+                    "files": [
+                        "anadalemo.ttf"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7c9dcf60-3fd9-4464-859f-69ffb75593f3",
+            "name": "Arial",
+            "shortName": "arial",
+            "publisher": "Microsoft",
+            "categories": [
+                "sans-serif"
+            ],
+            "installations": [
+                {
+                    "type": "cabextract",
+                    "_localPath": "corefonts/arial32.exe",
+                    "files": [
+                        "arial.ttf",
+                        "arialbd.ttf",
+                        "arialbi.ttf",
+                        "ariali.ttf"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "5dee63cc-bc8f-42a0-bb1b-666a1a0df88f",
+            "name": "Arial Black",
+            "shortName": "arialb",
+            "publisher": "Microsoft",
+            "categories": [
+                "sans-serif"
+            ],
+            "installations": [
+                {
+                    "type": "cabextract",
+                    "_localPath": "corefonts/arialb32.exe",
+                    "files": [
+                        "ariblk.ttf"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4581db00-e2fb-4da0-b721-6d868e953aa8",
+            "name": "Comic Sans MS",
+            "shortName": "comic",
+            "publisher": "Microsoft",
+            "categories": [
+                "cursive"
+            ],
+            "installations": [
+                {
+                    "type": "cabextract",
+                    "_localPath": "corefonts/comic32.exe",
+                    "files": [
+                        "comic.ttf",
+                        "comicbd.ttf"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "6b2988e6-e25c-4173-88c5-9ef26ee0780f",
+            "name": "Courier New",
+            "shortName": "courie",
+            "publisher": "Microsoft",
+            "categories": [
+                "monospaced"
+            ],
+            "installations": [
+                {
+                    "type": "cabextract",
+                    "_localPath": "corefonts/courie32.exe",
+                    "files": [
+                        "cour.ttf",
+                        "courbd.ttf",
+                        "courbi.ttf",
+                        "couri.ttf"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "f1dc67ca-32ec-4a39-baa1-e08234bcdcac",
+            "name": "Georgia",
+            "shortName": "georgi",
+            "publisher": "Microsoft",
+            "categories": [
+                "serif"
+            ],
+            "installations": [
+                {
+                    "type": "cabextract",
+                    "_localPath": "corefonts/georgi32.exe",
+                    "files": [
+                        "georgia.ttf",
+                        "georgiab.ttf",
+                        "georgiai.ttf",
+                        "georgiaz.ttf"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "28ba216b-42bb-4894-a1b2-0a7d0af3181b",
+            "name": "Impact",
+            "shortName": "impact",
+            "publisher": "Microsoft",
+            "categories": [
+                "sans-serif"
+            ],
+            "installations": [
+                {
+                    "type": "cabextract",
+                    "_localPath": "corefonts/impact32.exe",
+                    "files": [
+                        "impact.ttf"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "28ef5602-f2ce-4cad-bb7c-28cc4de37b00",
+            "name": "Times New Roman",
+            "shortName": "times",
+            "publisher": "Microsoft",
+            "categories": [
+                "serif"
+            ],
+            "installations": [
+                {
+                    "type": "cabextract",
+                    "_localPath": "corefonts/times32.exe",
+                    "files": [
+                        "times.ttf",
+                        "timesbd.ttf",
+                        "timesbi.ttf",
+                        "timesi.ttf"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4d4d3230-276f-4cc8-bfbc-c629346987a2",
+            "name": "Trebuchet MS",
+            "shortName": "trebuc",
+            "publisher": "Microsoft",
+            "categories": [
+                "sans-serif"
+            ],
+            "installations": [
+                {
+                    "type": "cabextract",
+                    "_localPath": "corefonts/trebuc32.exe",
+                    "files": [
+                        "trebuc.ttf",
+                        "trebucbd.ttf",
+                        "trebucbi.ttf",
+                        "trebucit.ttf"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "92a8e078-f336-4b62-bbc6-5f28b8293ee8",
+            "name": "Verdana",
+            "shortName": "verdan",
+            "publisher": "Microsoft",
+            "categories": [
+                "sans-serif"
+            ],
+            "installations": [
+                {
+                    "type": "cabextract",
+                    "_localPath": "corefonts/verdan32.exe",
+                    "files": [
+                        "verdana.ttf",
+                        "verdanab.ttf",
+                        "verdanai.ttf",
+                        "verdanaz.ttf"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2dcc7646-03a7-4454-a5e8-ebd761b920f0",
+            "name": "Webdings",
+            "shortName": "webdin",
+            "publisher": "Microsoft",
+            "categories": [
+                "symbol"
+            ],
+            "installations": [
+                {
+                    "type": "cabextract",
+                    "_localPath": "corefonts/webdin32.exe",
+                    "files": [
+                        "webdings.ttf"
+                    ]
+                }
+            ]
+        }
+    ]
+}
