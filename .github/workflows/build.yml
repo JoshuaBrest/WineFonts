@@ -38,7 +38,7 @@ jobs:
           NODE_ENV: production
           VERSION: ${{ github.ref }}
           URL_PREFIX: ${{ secrets.URL_PREFIX }}
-        run: pnpm --prefix run script:build
+        run: pnpm --prefix utils run script:build
       - name: Upload Libraries to R2
         env:
           RCLONE_CONFIG_R2_TYPE: s3
