@@ -37,7 +37,7 @@ jobs:
       - name: Install Build Dependencies
         env:
           NODE_ENV: production
-          VERSION: ${{ github.ref }}
+          VERSION: ${{ github.ref_name }}
           URL_PREFIX: ${{ secrets.URL_PREFIX }}
         run: pnpm --prefix utils run script:build
       - name: Upload Libraries to R2
