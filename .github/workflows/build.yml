@@ -14,18 +14,32 @@ jobs:
       - name: Setup Rclone
         uses: AnimMouse/setup-rclone@v1
         with:
-                rclone_config: ${{ secrets.RCLONE_CONFIG }}
+          rclone_config: ${{ secrets.RCLONE_CONFIG }}
       - uses: actions/setup-node@v4
         with:
           node-version: 16
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+            version: 8
+            run_install: false
+  
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+            echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+            path: ${{ env.STORE_PATH }}
+            key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+            restore-keys: |
+              ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: pnpm --prefix utils install
+      - name: Install Build Dependencies
+        run: pnpm --prefix run build
       - name: Upload Libraries to R2
-        env:
-          RCLONE_CONFIG_R2_TYPE: s3
-          RCLONE_CONFIG_R2_PROVIDER: Cloudflare
-          RCLONE_CONFIG_R2_ENV_AUTH: true
-          RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.RCLONE_ACCESS_KEY_ID }}
-          RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.RCLONE_SECRET_ACCESS_KEY }}
-          RCLONE_CONFIG_R2_ENDPOINT: ${{ secrets.RCLONE_ENDPOINT }}
         run: |
           rclone purge r2:font-bucket
-          rclone copy
+          rclone copy dist r2:font-bucket
