@@ -1,6 +1,7 @@
 name: Build Fonts
 on:
   release:
+    types: [published]
 
 jobs:
   build:
