@@ -239,6 +239,7 @@ const main = async () => {
 
     fonts = {
         version: version,
+        groups: fonts.groups,
         downloads: fonts.downloads,
         fonts: fonts.fonts
     };

@@ -49,5 +49,5 @@ jobs:
           RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.RCLONE_SECRET_ACCESS_KEY }}
           RCLONE_CONFIG_R2_ENDPOINT: ${{ secrets.RCLONE_ENDPOINT }}
         run: |
-          rclone purge r2:font-bucket
+          rclone delete r2:font-bucket
           rclone copy dist r2:font-bucket
