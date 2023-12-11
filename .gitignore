@@ -1,2 +1,5 @@
 newUUIDs.json
 dist/
+
+# MacOS
+.DS_Store
