@@ -244,7 +244,7 @@ const main = async () => {
     };
 
     // Write the JSON file
-    writeFileSync(join(outDir, 'fonts.json'), JSON.stringify(fonts, null, 4));
+    writeFileSync(join(outDir, 'fonts.json'), JSON.stringify(fonts));
 };
 
 main().catch((err) => {

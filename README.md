@@ -2,6 +2,10 @@
 
 These fonts are a collection of windows fonts that are often used by windows applications. They are also organized in groups much like `winetricks`'s `corefonts` command.
 
+## Usage
+
+To use the uploaded version of the fonts, you can use the following link: `https://winefonts.bashed.sh/fonts.json`. This link will always point to the latest version of the fonts.
+
 ## Included Fonts
 
 * Andale Mono v2.00
