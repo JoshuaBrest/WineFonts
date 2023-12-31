@@ -16,12 +16,14 @@ jobs:
           toolchain: stable
           override: true
       - name: Build directory utils
-        run: cargo build --release --manifest-path=utils/Cargo.toml
+        working-directory: ./utils
+        run: cargo build --release
       - name: Build and package fonts
+        working-directory: ./utils
         env:
           ENDPOINT: ${{ secrets.S3_ENDPOINT }}
           ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
           SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
           BUCKET: ${{ secrets.BUCKET }}
           BASE_URL: ${{ secrets.BASE_URL }}
-        run: cargo run --release --manifest-path=utils/Cargo.toml --config ./fonts.json --base-path ./ --version ${{ github.ref_name }}
+        run: cargo run --release --config ../fonts.json --base-path ../ --version ${{ github.ref_name }}
