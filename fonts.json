@@ -1,23 +1,23 @@
 {
     "groups": [
         {
+            "id": "966f3c4b-d25b-44c7-ac9f-d2d327f79dca",
             "name": "corefonts",
             "fonts": [
-                "28ba216b-42bb-4894-a1b2-0a7d0af3181b",
-                "28ef5602-f2ce-4cad-bb7c-28cc4de37b00",
-                "2dcc7646-03a7-4454-a5e8-ebd761b920f0",
-                "2f3c7f5c-7e76-4955-8f91-f8752f510e87",
-                "4581db00-e2fb-4da0-b721-6d868e953aa8",
-                "4d4d3230-276f-4cc8-bfbc-c629346987a2",
-                "5dee63cc-bc8f-42a0-bb1b-666a1a0df88f",
-                "6b2988e6-e25c-4173-88c5-9ef26ee0780f",
-                "7c9dcf60-3fd9-4464-859f-69ffb75593f3",
-                "92a8e078-f336-4b62-bbc6-5f28b8293ee8",
-                "f1dc67ca-32ec-4a39-baa1-e08234bcdcac"
+                "Andale Mono",
+                "Arial",
+                "Arial Black",
+                "Comic Sans MS",
+                "Courier New",
+                "Georgia",
+                "Impact",
+                "Times New Roman",
+                "Trebuchet MS",
+                "Verdana",
+                "Webdings"
             ]
         }
     ],
-    "downloads": [],
     "fonts": [
         {
             "id": "2f3c7f5c-7e76-4955-8f91-f8752f510e87",
@@ -25,12 +25,12 @@
             "shortName": "andale",
             "publisher": "Microsoft",
             "categories": [
-                "monospaced"
+                "monospace"
             ],
             "installations": [
                 {
                     "type": "cabextract",
-                    "_localPath": "corefonts/andale32.exe",
+                    "download": "./corefonts/andale32.exe",
                     "files": [
                         "anadalemo.ttf"
                     ]
@@ -48,7 +48,7 @@
             "installations": [
                 {
                     "type": "cabextract",
-                    "_localPath": "corefonts/arial32.exe",
+                    "download": "./corefonts/arial32.exe",
                     "files": [
                         "arial.ttf",
                         "arialbd.ttf",
@@ -69,7 +69,7 @@
             "installations": [
                 {
                     "type": "cabextract",
-                    "_localPath": "corefonts/arialb32.exe",
+                    "download": "./corefonts/arialb32.exe",
                     "files": [
                         "ariblk.ttf"
                     ]
@@ -87,7 +87,7 @@
             "installations": [
                 {
                     "type": "cabextract",
-                    "_localPath": "corefonts/comic32.exe",
+                    "download": "./corefonts/comic32.exe",
                     "files": [
                         "comic.ttf",
                         "comicbd.ttf"
@@ -101,12 +101,12 @@
             "shortName": "courie",
             "publisher": "Microsoft",
             "categories": [
-                "monospaced"
+                "monospace"
             ],
             "installations": [
                 {
                     "type": "cabextract",
-                    "_localPath": "corefonts/courie32.exe",
+                    "download": "./corefonts/courie32.exe",
                     "files": [
                         "cour.ttf",
                         "courbd.ttf",
@@ -127,7 +127,7 @@
             "installations": [
                 {
                     "type": "cabextract",
-                    "_localPath": "corefonts/georgi32.exe",
+                    "download": "./corefonts/georgi32.exe",
                     "files": [
                         "georgia.ttf",
                         "georgiab.ttf",
@@ -148,7 +148,7 @@
             "installations": [
                 {
                     "type": "cabextract",
-                    "_localPath": "corefonts/impact32.exe",
+                    "download": "./corefonts/impact32.exe",
                     "files": [
                         "impact.ttf"
                     ]
@@ -166,7 +166,7 @@
             "installations": [
                 {
                     "type": "cabextract",
-                    "_localPath": "corefonts/times32.exe",
+                    "download": "./corefonts/times32.exe",
                     "files": [
                         "times.ttf",
                         "timesbd.ttf",
@@ -187,7 +187,7 @@
             "installations": [
                 {
                     "type": "cabextract",
-                    "_localPath": "corefonts/trebuc32.exe",
+                    "download": "./corefonts/trebuc32.exe",
                     "files": [
                         "trebuc.ttf",
                         "trebucbd.ttf",
@@ -208,7 +208,7 @@
             "installations": [
                 {
                     "type": "cabextract",
-                    "_localPath": "corefonts/verdan32.exe",
+                    "download": "./corefonts/verdan32.exe",
                     "files": [
                         "verdana.ttf",
                         "verdanab.ttf",
@@ -229,7 +229,7 @@
             "installations": [
                 {
                     "type": "cabextract",
-                    "_localPath": "corefonts/webdin32.exe",
+                    "download": "./corefonts/webdin32.exe",
                     "files": [
                         "webdings.ttf"
                     ]

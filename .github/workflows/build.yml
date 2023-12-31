@@ -5,49 +5,23 @@ on:
 
 jobs:
   build:
-    name: Build Fonts
+    name: Build Fonts utils
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Rclone
-        uses: AnimMouse/setup-rclone@v1
-      - uses: actions/setup-node@v4
+      - name: Setup Rust Build Environment
+        uses: actions-rs/toolchain@v1
         with:
-          node-version: 16
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        with:
-          version: 8
-          run_install: false
-
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-      - name: Install dependencies
-        run: pnpm --prefix utils install
-      - name: Install Build Dependencies
+          toolchain: stable
+          override: true
+      - name: Build directory utils
+        run: cargo build --release --manifest-path=utils/Cargo.toml
+      - name: Build and package fonts
         env:
-          NODE_ENV: production
-          VERSION: ${{ github.ref_name }}
-          URL_PREFIX: ${{ secrets.URL_PREFIX }}
-        run: pnpm --prefix utils run script:build
-      - name: Upload Libraries to R2
-        env:
-          RCLONE_CONFIG_R2_TYPE: s3
-          RCLONE_CONFIG_R2_PROVIDER: Cloudflare
-          RCLONE_CONFIG_R2_ENV_AUTH: true
-          RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.RCLONE_ACCESS_KEY_ID }}
-          RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.RCLONE_SECRET_ACCESS_KEY }}
-          RCLONE_CONFIG_R2_ENDPOINT: ${{ secrets.RCLONE_ENDPOINT }}
-        run: |
-          rclone delete r2:font-bucket
-          rclone copy dist r2:font-bucket
+          ENDPOINT: ${{ secrets.S3_ENDPOINT }}
+          ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
+          SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
+          BUCKET: ${{ secrets.BUCKET }}
+          BASE_URL: ${{ secrets.BASE_URL }}
+        run: cargo run --release --manifest-path=utils/Cargo.toml --config ./fonts.json --base-path ./ --version ${{ github.ref_name }}

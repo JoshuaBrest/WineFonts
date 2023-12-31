@@ -1,5 +1,4 @@
-newUUIDs.json
-dist/
+.env
 
 # MacOS
 .DS_Store
