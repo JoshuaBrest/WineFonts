@@ -4,7 +4,7 @@ These fonts are a collection of windows fonts that are often used by windows app
 
 ## Usage
 
-To use the uploaded version of the fonts, you can use the following link: `https://winefonts.bashed.sh/fonts.json`. This link will always point to the latest version of the fonts.
+To use the uploaded version of the fonts, you can use the following link: `https://winefonts.bashed.sh/versions.json`. This link will always point to the latest version of the fonts.
 
 See [docs.md](docs.md) for the format of the JSON file.
 
