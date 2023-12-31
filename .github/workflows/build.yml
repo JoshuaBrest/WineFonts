@@ -26,4 +26,4 @@ jobs:
           SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
           BUCKET: ${{ secrets.BUCKET }}
           BASE_URL: ${{ secrets.BASE_URL }}
-        run: cargo run --release --config ../fonts.json --base-path ../ --version ${{ github.ref_name }}
+        run: cargo run --release update --config ../fonts.json --base-path ../ --version ${{ github.ref_name }}
