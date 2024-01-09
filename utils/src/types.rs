@@ -27,13 +27,20 @@ pub enum SourceDownload {
     LocalResource(PathBuf),
 }
 
+#[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq, Hash)]
+#[serde(rename_all = "camelCase")]
+pub struct CabextractInstalationExtractData {
+    pub file: String,
+    pub registry_name: String,
+}
+
 instalation_struct! {
     #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
     #[serde(rename_all = "camelCase")]
     /// Cabextract instalation type
     pub struct CabextractInstalationSource, CabextractInstalationCompiled {
         /// The cabextract file
-        pub files: Vec<String>,
+        pub files: Vec<CabextractInstalationExtractData>,
     }
 }
 

@@ -32,7 +32,10 @@
                     "type": "cabextract",
                     "download": "./corefonts/andale32.exe",
                     "files": [
-                        "anadalemo.ttf"
+                        {
+                            "file": "anadalemo.ttf",
+                            "registryName": "Andale Mono (TrueType)"
+                        }
                     ]
                 }
             ]
@@ -50,10 +53,22 @@
                     "type": "cabextract",
                     "download": "./corefonts/arial32.exe",
                     "files": [
-                        "arial.ttf",
-                        "arialbd.ttf",
-                        "arialbi.ttf",
-                        "ariali.ttf"
+                        {
+                            "file": "arial.ttf",
+                            "registryName": "Arial (TrueType)"
+                        },
+                        {
+                            "file": "arialbd.ttf",
+                            "registryName": "Arial Bold (TrueType)"
+                        },
+                        {
+                            "file": "arialbi.ttf",
+                            "registryName": "Arial Bold Italic (TrueType)"
+                        },
+                        {
+                            "file": "ariali.ttf",
+                            "registryName": "Arial Italic (TrueType)"
+                        }
                     ]
                 }
             ]
@@ -71,7 +86,10 @@
                     "type": "cabextract",
                     "download": "./corefonts/arialb32.exe",
                     "files": [
-                        "ariblk.ttf"
+                        {
+                            "file": "ariblk.ttf",
+                            "registryName": "Arial Black (TrueType)"
+                        }
                     ]
                 }
             ]
@@ -89,8 +107,14 @@
                     "type": "cabextract",
                     "download": "./corefonts/comic32.exe",
                     "files": [
-                        "comic.ttf",
-                        "comicbd.ttf"
+                        {
+                            "file": "comic.ttf",
+                            "registryName": "Comic Sans MS (TrueType)"
+                        },
+                        {
+                            "file": "comicbd.ttf",
+                            "registryName": "Comic Sans MS Bold (TrueType)"
+                        }
                     ]
                 }
             ]
@@ -108,10 +132,22 @@
                     "type": "cabextract",
                     "download": "./corefonts/courie32.exe",
                     "files": [
-                        "cour.ttf",
-                        "courbd.ttf",
-                        "courbi.ttf",
-                        "couri.ttf"
+                        {
+                            "file": "cour.ttf",
+                            "registryName": "Courier New (TrueType)"
+                        },
+                        {
+                            "file": "courbd.ttf",
+                            "registryName": "Courier New Bold (TrueType)"
+                        },
+                        {
+                            "file": "courbi.ttf",
+                            "registryName": "Courier New Bold Italic (TrueType)"
+                        },
+                        {
+                            "file": "couri.ttf",
+                            "registryName": "Courier New Italic (TrueType)"
+                        }
                     ]
                 }
             ]
@@ -129,10 +165,22 @@
                     "type": "cabextract",
                     "download": "./corefonts/georgi32.exe",
                     "files": [
-                        "georgia.ttf",
-                        "georgiab.ttf",
-                        "georgiai.ttf",
-                        "georgiaz.ttf"
+                        {
+                            "file": "georgia.ttf",
+                            "registryName": "Georgia (TrueType)"
+                        },
+                        {
+                            "file": "georgiab.ttf",
+                            "registryName": "Georgia Bold (TrueType)"
+                        },
+                        {
+                            "file": "georgiai.ttf",
+                            "registryName": "Georgia Italic (TrueType)"
+                        },
+                        {
+                            "file": "georgiaz.ttf",
+                            "registryName": "Georgia Bold Italic (TrueType)"
+                        }
                     ]
                 }
             ]
@@ -150,7 +198,10 @@
                     "type": "cabextract",
                     "download": "./corefonts/impact32.exe",
                     "files": [
-                        "impact.ttf"
+                        {
+                            "file": "impact.ttf",
+                            "registryName": "Impact (TrueType)"
+                        }
                     ]
                 }
             ]
@@ -168,10 +219,22 @@
                     "type": "cabextract",
                     "download": "./corefonts/times32.exe",
                     "files": [
-                        "times.ttf",
-                        "timesbd.ttf",
-                        "timesbi.ttf",
-                        "timesi.ttf"
+                        {
+                            "file": "times.ttf",
+                            "registryName": "Times New Roman (TrueType)"
+                        },
+                        {
+                            "file": "timesbd.ttf",
+                            "registryName": "Times New Roman Bold (TrueType)"
+                        },
+                        {
+                            "file": "timesbi.ttf",
+                            "registryName": "Times New Roman Bold Italic (TrueType)"
+                        },
+                        {
+                            "file": "timesi.ttf",
+                            "registryName": "Times New Roman Italic (TrueType)"
+                        }
                     ]
                 }
             ]
@@ -189,10 +252,22 @@
                     "type": "cabextract",
                     "download": "./corefonts/trebuc32.exe",
                     "files": [
-                        "trebuc.ttf",
-                        "trebucbd.ttf",
-                        "trebucbi.ttf",
-                        "trebucit.ttf"
+                        {
+                            "file": "trebuc.ttf",
+                            "registryName": "Trebuchet MS (TrueType)"
+                        },
+                        {
+                            "file": "trebucbd.ttf",
+                            "registryName": "Trebuchet MS Bold (TrueType)"
+                        },
+                        {
+                            "file": "trebucbi.ttf",
+                            "registryName": "Trebuchet MS Bold Italic (TrueType)"
+                        },
+                        {
+                            "file": "trebucit.ttf",
+                            "registryName": "Trebuchet MS Italic (TrueType)"
+                        }
                     ]
                 }
             ]
@@ -210,10 +285,22 @@
                     "type": "cabextract",
                     "download": "./corefonts/verdan32.exe",
                     "files": [
-                        "verdana.ttf",
-                        "verdanab.ttf",
-                        "verdanai.ttf",
-                        "verdanaz.ttf"
+                        {
+                            "file": "verdana.ttf",
+                            "registryName": "Verdana (TrueType)"
+                        },
+                        {
+                            "file": "verdanab.ttf",
+                            "registryName": "Verdana Bold (TrueType)"
+                        },
+                        {
+                            "file": "verdanai.ttf",
+                            "registryName": "Verdana Italic (TrueType)"
+                        },
+                        {
+                            "file": "verdanaz.ttf",
+                            "registryName": "Verdana Bold Italic (TrueType)"
+                        }
                     ]
                 }
             ]
@@ -231,7 +318,10 @@
                     "type": "cabextract",
                     "download": "./corefonts/webdin32.exe",
                     "files": [
-                        "webdings.ttf"
+                        {
+                            "file": "webdings.ttf",
+                            "registryName": "Webdings (TrueType)"
+                        }
                     ]
                 }
             ]
