@@ -7,6 +7,7 @@ use url::Url;
 use uuid::Uuid;
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct Downloadable {
     pub id: Uuid,
     pub file_size: u64,
@@ -64,7 +65,7 @@ pub async fn upload_version_to_s3(s3: &Bucket, id: Uuid, built: &Vec<u8>) {
     let mut path: PathBuf = [VERSIONS_FILE_PATH, &id.to_string()].iter().collect();
     path.set_extension("json");
 
-    match s3.put_object(path.to_str().unwrap(), &built).await {
+    match s3.put_object_with_content_type(path.to_str().unwrap(), &built, "application/json").await {
         Ok(_) => info!("Uploaded version {}.json", id),
         Err(e) => {
             error!("Failed to upload version {}.json: {}", id, e);
@@ -113,7 +114,7 @@ pub async fn upload_versions_to_s3(s3: &Bucket, versions: Vec<VersionInfo>) {
         }
     };
 
-    match s3.put_object("/versions.json", &data).await {
+    match s3.put_object_with_content_type("/versions.json", &data, "application/json").await {
         Ok(_) => info!("Uploaded versions.json"),
         Err(e) => {
             error!("Failed to upload versions.json: {}", e);
@@ -208,7 +209,7 @@ pub async fn upload_files_to_s3(
         }
     };
 
-    match s3.put_object("downloadables.json", &data).await {
+    match s3.put_object_with_content_type("downloadables.json", &data, "application/json").await {
         Ok(_) => info!("Uploaded downloadables.json"),
         Err(e) => {
             error!("Failed to upload downloadables.json: {}", e);
