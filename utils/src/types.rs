@@ -135,6 +135,7 @@ pub struct Compiled {
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
+#[serde(rename_all = "camelCase")]
 /// The references to the versions
 pub struct FileFormatReference {
     pub id: Uuid,

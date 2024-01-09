@@ -75,6 +75,7 @@ pub async fn upload_version_to_s3(s3: &Bucket, id: Uuid, built: &Vec<u8>) {
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct VersionInfo {
     pub id: Uuid,
     pub version: Version,
